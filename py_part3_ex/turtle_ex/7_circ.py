@@ -1,15 +1,13 @@
 from turtle import *
 
-#moves turtle into position
-up()
-forward(60)
-left(40)
-forward(60)
-left(40)
-down()
+def circ():
+    for i in range(4):
+        up()
+        forward(60)
+        left(40)
+        down()
+    width(5)
+    circle(150)
 
-#draws circle
-width(5)
-circle(150)
-
+circ()
 mainloop()

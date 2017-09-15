@@ -1,12 +1,9 @@
 from turtle import *
 
-def draw_tri():
-    forward(300)
-    left(120)
-    forward(300)
-    left(120)
-    forward(300)
-    left(120)
+def triangle():
+    for i in range (3):
+        forward(300)
+        left(120)
 
-draw_tri()
+triangle()
 mainloop()

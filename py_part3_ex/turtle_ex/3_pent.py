@@ -2,13 +2,10 @@
 
 from turtle import *
 
-def draw_pent():
-    num_sides = 5
-    side_length = 70
-    angle = 360.0 / num_sides
+def pentagon():
+    for i in range (5):
+        forward(70)
+        right(360.0 / 5)
 
-    for i in range(num_sides):
-        forward(side_length)
-        right(angle)
-
+pentagon()
 mainloop()

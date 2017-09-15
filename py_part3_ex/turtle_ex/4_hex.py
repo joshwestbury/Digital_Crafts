@@ -2,13 +2,10 @@
 
 from turtle import *
 
-def draw_hex():
-    num_sides = 6
-    side_length = 70
-    angle = 360.0 / num_sides
+def hexagon():
+    for i in range(6):
+        forward(70)
+        right(360.0 / 6)
 
-    for i in range(num_sides):
-        forward(side_length)
-        right(angle)
-
+hexagon()
 mainloop()
