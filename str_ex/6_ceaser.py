@@ -2,12 +2,26 @@
 #
 # Use your solution to decipher the following text: "lbh zhfg hayrnea jung lbh unir yrnearq"
 
-#ord('a')
-  # this provides the ascii number
+import string
 
-#chr(113)
-   # this provides the corrosponding ascii letter
+print(string.ascii_letters)
 
-#import string
-#string.ascii_letters
-#stirng_ascii_lowercase
+ #stirng_ascii_lowercase
+
+# a = []
+# for i in ("lbh zhfg hayrnea jung lbh unir yrnearq"):
+#     x = ord(i)
+#     a.append(x)
+# #print(a)
+#
+# b = []
+# for j in a:
+#     j = j - 13
+#     b.append(j)
+# #print(b)
+#
+# c = []
+# for k in b:
+#     z = chr(k)
+#     c.append(z)
+# print(c)
