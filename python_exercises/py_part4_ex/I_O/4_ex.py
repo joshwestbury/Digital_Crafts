@@ -21,33 +21,3 @@ for i in data_lst:
 
 plot.plot(xl, yl)
 plot.show()
-
-
-
-
-# for key in data.keys():
-#     print(data[key[1]])
-    #xl.append(key)
-
-#print(xl)
-
-
-
-
-
-#dict(zip())
-
-
-
-# def f(x):
-#     #return sin(x)
-#
-# xs = list(range(-5, 5, 1))
-# ys = []
-# for x in xs:
-#     ys.append(f(x))
-#
-# plot.plot(xs, ys)
-# plot.show()
-#
-#
