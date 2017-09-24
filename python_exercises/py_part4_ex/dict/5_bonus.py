@@ -13,7 +13,7 @@ def hist2(string):
             tally[word] = 1
     #print(tally)
 
-    tally1 = sorted(tally.items(), key = operator.itemgetter(1))
+    tally1 = sorted(tally.items(), key = operator.itemgetter(1)) #the (1) tells the itemgetter that we want to sort by the value. If 0 were entedered it would sort by the key names.
     #print(tally1)
     x = tally1[-3:]
     print(x)
