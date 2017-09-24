@@ -1,0 +1,20 @@
+/*.box {
+
+}*/
+
+.img-center {
+   position: absolute;
+   top: 20%;
+   left: 25%;
+   }
+
+.form-center {
+    position: absolute;
+    top: 50%;
+    left: 30%
+}
+
+input {
+    background: url(images/mic.png) no-repeat;
+    background-position: 460px;
+}
