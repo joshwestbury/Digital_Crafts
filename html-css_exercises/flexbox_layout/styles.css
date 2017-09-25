@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    height: 20%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.col-1 {
+    background-color: blue;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.col-2 {
+    background-color: yellow;
+    flex-grow: 2;
+    height: 80%;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    height: 20%;
+}
