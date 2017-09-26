@@ -1,6 +1,5 @@
-import math
+# Make a Hero class to store the health and power of the hero, and make a Goblin class to store the health and power of the goblin. Use a hero object in place of the variables hero_health and hero_power and use a goblin object in place of the variables goblin_health and goblin_power all through out the app.
 
-infinite = math.inf
 
 class Character:
     def __init__(self, name):
@@ -9,9 +8,12 @@ class Character:
     def __str__(self):
         return '{}'.format(self.name)
 
-    # #def attack(self, enemy):
-    #     enemy.health -= self.power
-    #     print("{} did {} damage to {}.".format(self.name, self.power, enemy.name))
+    def attack(self, enemy):
+        enemy.health -= self.power
+        print("{} did {} damage to {}.".format(self.name, self.power, enemy.name))
+
+    def attack_zombie(self, enemy):
+        print("Lester is a Zombie. He cannot die!")
 
     def alive(self):
         if self.health > 0:
@@ -26,45 +28,32 @@ class Hero (Character):
         self.health = 10
         self.power = 5
 
-class Enemy:
-    def __init__ (self, name):
-        self.name = name
-
-    def attack(self, enemy):
-        enemy.health -= self.power
-        print("{} did {} damage to {}.".format(self.name, self.power, enemy.name))
-
-class Goblin (Enemy):
+class Goblin (Character):
     def __init__(self, name):
         self.name = name
         self.health = 6
         self.power = 2
 
-class Zombie (Enemy):
+class Zombie (Character):
     def __init__(self, name):
         self.name = name
-        self.health = math.inf
-        self.power = math.inf
+        self.health = 1
+        self.power = 1
 
-hero = Hero("Jack")
-#felix = Goblin("Felix")
-#lester = Zombie("Lester")
+hero_1 = Hero("Jack")
+goblin_1 = Goblin("Felix")
+zombie_1 = Zombie("Lester")
 
-enemy = input("Your name is Jack and you're the hero of this game. Who do you want to fight? \n\t 1. A Gobline named Felix. \n\t  Or 2. A Zombie named Lester? Enter #1 or #2")
-if enemy == 1:
-    felix = Goblin("Felix")
-elif enemy == 2:
-    lester = Zombie("Lester")
-
-while enemy.alive() and hero.alive():
-    jack.print_status()
-    lester.print_status()
+while zombie_1.alive() and hero_1.alive():
+    hero_1.print_status()
+    zombie_1.print_status()
     #print("The goblin has {} health and {} power.".format(felix.health, felix.power))
     print()
     raw_input = input("What do you want to do? \n\t 1. fight the Zombie \n\t 2. do nothing \n\t 3. flee \n\t")
     if raw_input == "1":
-        jack.attack(lester)
-        if lester.health <= 0:
+        hero_1.attack_zombie(zombie_1)
+        break
+        if zombie_1.health <= 0:
             print("The Zombie is dead.")
     elif raw_input == "2":
         pass

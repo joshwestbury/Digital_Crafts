@@ -1,0 +1,82 @@
+
+nav {
+    display: flex;
+    margin: 10px;
+    height: 5%;
+    background-color: white;
+    align-items: center;
+}
+
+h1 {
+    flex: 1;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.nav-buttons {
+    text-decoration: underline;
+}
+
+.nav-border {
+    border-right: 2px solid black;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+.jumbo-text {
+    text-align: center;
+}
+
+#awesomeness {
+    text-align: center;
+}
+
+.cent {
+    text-align: center;
+}
+
+.bottom-border {
+    border-bottom: solid 1px;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.row {
+    border-right: none;
+}
+
+ul.dash {
+    margin-left: 0;
+    padding-left: 1em;
+    text-align: center;
+}
+
+ul.dash > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
+
+.bottom-margin {
+    margin-bottom: 100px;
+}
+
+.top-margin {
+    margin-top: 100px;
+}
+
+h2 {
+    flex: 1;
+    font-size: 24px;
+    padding: 10px;
+}
+
+footer {
+    margin: 3%;
+    text-align: center;
+}
