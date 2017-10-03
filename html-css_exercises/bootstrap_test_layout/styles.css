@@ -80,3 +80,9 @@ footer {
     margin: 3%;
     text-align: center;
 }
+
+@media only screen (min-width: 640px;) {
+    .nav-mob {
+        
+    }
+}
