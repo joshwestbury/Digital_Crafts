@@ -2,12 +2,12 @@ Pen and Paper Exercises
 
 Association Examples
 
-pets and owners
-blog posts and authors
-teachers and students
-parents and children
-classes and objects
-projects and contributors
+pets and owners: one pet to many owners
+blog posts and authors: one post to many authors
+teachers and students: one teacher to many students
+parents and children: one child to many parents
+classes and objects: one class to many objects
+projects and contributors: many projects to many contributors. Table 1: Projects-- Table 2: Contributors--Table 3: Projects_Contributors
 
 
 Step 1:
