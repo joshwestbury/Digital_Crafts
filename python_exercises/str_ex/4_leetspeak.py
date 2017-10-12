@@ -38,9 +38,11 @@
 #
 # print (new_string )
 
-replacements = ( ('A','4'), ('E','3'), ('G','6'), ('I','1'), ('O', '0'), ('S', '5'), ('T', '7'))
-my_par = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.".upper()
+replacements = (('A', '4'), ('E', '3'), ('G', '6'), ('I', '1'), ('O', '0'),
+                ('S', '5'), ('T', '7'))
+my_par = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.".upper(
+)
 for i, j in replacements:
     my_par = my_par.replace(i, j)
 
-print (my_par)
+print(my_par)
