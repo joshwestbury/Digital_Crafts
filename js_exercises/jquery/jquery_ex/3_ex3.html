@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Example</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p id="the-message">Pardon me, would you please</p>
+        <button id="the-button">meh</button>
+    </body>
+    <script>
+      $(document).ready(function () {
+          $('#the-button').text('Please click the button')
+              $('button').click(function () {
+                  $('#the-message').text('You clicked me')
+                       $(this).text('Click Again');
+         });
+        })
+</script>
+</html>

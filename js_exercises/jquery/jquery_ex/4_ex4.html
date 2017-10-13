@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Example</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <input id="text-field" type="text" name="text">
+        <button id="clear-button">Clear</button>
+        <button id="save-button">Save</button>
+        <ul id="log">
+            <li>Type messages here:</li>
+        </ul>
+    </body>
+    <script>
+      $(document).ready(function () {
+            $('#clear-button').click(function () {
+                 $('#clear-button').empty()
+             })
+             $('#save-button').click(function () {
+                 var x = $('#text-field').val();
+                $('#log').append(`<li>${x}</li>`)
+             })
+
+            })
+</script>
+</html>
