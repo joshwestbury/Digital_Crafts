@@ -38,13 +38,8 @@ function makeDeck() {
   return cards
 }
 
-//cards = makeDeck()
+cards = makeDeck()
 
-Card.prototype.greet = function() {
-  console.log(`images/${this.ranks}_of_${this.suits}.png`)
-};
-
-Card.greet(makeDeck())
 
 
 

@@ -16,6 +16,21 @@ class Card{
         this.rank = rank;
         this.suit = suit;
     }
+    getImageUrl () {
+        var cardName;
+        if (this.rank == 1) {
+            cardName = 'ace';
+        } else if (this.rank == 11) {
+            cardName = 'jack';
+        } else if (this.rank ==12) {
+            cardName = 'queen';
+        } else if (this.rank == 13) {
+            cardName = 'king';
+        } else {
+            cardName = this.rank;
+        }
+        return `images/${cardName}_of_${this.suit}.png`
+    }
 }
 
 class Deck{
@@ -36,6 +51,15 @@ class Deck{
     readDeck() {
         console.log(this.cards)
     }
+    shuffleDeck () {
+        for (var i = this.cards.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = this.cards[i];
+            this.cards[i] = this.cards[j];
+            this.cards[j] = temp;
+        }
+        return this.cards;
+    }
 }
 
 var myDeck = new Deck()
@@ -52,7 +76,6 @@ class Hand {
         var card2 = myDeck.cards.pop()
         return this.dealtCard.push(card1, card2)
     }
-
     getPoints () {
         var total = 0
         for (var i = 0; i < this.dealtCard.length; i++) {
@@ -69,3 +92,5 @@ class Hand {
 var myHand = new Hand()
 myHand.addCard()
 myHand.getPoints()
+console.log(myHand.dealtCard[0].getImageUrl());
+console.log(myDeck.shuffleDeck());
