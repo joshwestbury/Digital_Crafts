@@ -11,29 +11,27 @@
 // filename: blah.txt
 // ENOENT: no such file or directory, open 'blah.txt'
 
+var fs = require('fs');
 var readline = require('readline');
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 rl.question("Please enter a file name: ", function(answer) {
-  console.log("Awesomesauce:", answer);
-  rl.close();
-});
-
-
-fs.readFile(filename, function (error, buffer) {
-  if (error) {
-    console.error(error.message);
-    return;
-  }
-  var contents = buffer.toString();
-  var backwards = contents.split('').reverse().join('');
-  fs.writeFile(filename, backwards, function (error) {
-    if (error) {
-      console.error(error.message);
-      return;
-    }
-    console.log('File Save: ', filename);
-  });
+    fs.readFile(answer, function (error, buffer) {
+        if (error) {
+            console.error(error.message);
+            return
+        }
+        var contents = buffer.toString();
+        var upper = contents.toUpperCase();
+        fs.writeFile(answer, upper, function (error) {
+            if (error) {
+                console.error(error.message);
+                return;
+            }
+            console.log('File Save: ', answer);
+        });
+    });
+    rl.close();
 });
