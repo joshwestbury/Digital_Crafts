@@ -13,8 +13,8 @@ function main(input1, input2, out) {
             console.log(content);
             });
         }
-        catch (error) {
-            console.log("Error", error)
+        catch (e) {
+            reject(e);
         }
     });
     var read2 = new Promise (function(resolve, reject) {
@@ -25,8 +25,8 @@ function main(input1, input2, out) {
             console.log(content);
             });
         }
-        catch (error) {
-            console.log("Error", error)
+        catch (e) {
+            reject(e);
         }
     });
 }
