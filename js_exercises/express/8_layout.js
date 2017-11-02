@@ -4,8 +4,7 @@ var app = express();
 app.set('view engine', 'hbs');
 
 app.get('/', function(request, response) {
-    context= {}
-    response.render('home.hbs', context);
+    response.render('home.hbs');
 });
 
 app.get('/age', function(request, response) {
@@ -38,8 +37,6 @@ app.get('/hello', function(request, response) {
     var context = {title: 'Hello', name: name, age: age, birthyear:birthyear}
     response.render('hello.hbs', context);
 });
-
-
 
 app.listen(8080, function(){
     console.log('Listening on port 8080');

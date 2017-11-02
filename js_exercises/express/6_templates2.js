@@ -21,7 +21,7 @@ app.get('/fav_animals', function(request, response) {
         animals: animals,
         name: name,
     };
-    response.render('hello_2.hbs', context)
+    response.render('animals.hbs', context)
 });
 
 app.listen(8080, function(){
