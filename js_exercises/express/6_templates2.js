@@ -8,7 +8,6 @@ app.get('/', function(request, response) {
 });
 
 app.get('/fav_animals', function(request, response) {
-    var name = request.query.name || 'Name ???';
     var animals = [
         { name: 'cats', favorite: true },
         { name: 'dogs', favorite: true },
@@ -19,7 +18,6 @@ app.get('/fav_animals', function(request, response) {
     var context = {
         title: 'Animals',
         animals: animals,
-        name: name,
     };
     response.render('animals.hbs', context)
 });
