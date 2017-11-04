@@ -18,7 +18,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/todos', function(request, response) {
-    db.any('select * from task WHERE done=FALSE')
+    db.any('SELECT * FROM task WHERE done=FALSE')
       .then(function(todos) {
         response.render('todos.hbs', {
           todos: todos
